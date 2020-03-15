@@ -27,3 +27,19 @@ However, the results of the implementation itself were disappointing since I fai
 | -------------- | ------ |
 | BoG, max score | 0.8590 |
 | W2V, Avg Vec | 0.8314 |
+
+## CNN Implementation
+
+Having observed a minimal change in the score from using the Word2Vec algorithm, I realized that I had two options available for me to pursue to further increase my accuracy. 
+
+Firstly, considering the nature of my data (reviews in the form of paragraphs), I could consider using the Doc2Vec algorithm which would not only perform the function of Word2Vec and create feature vectors for my words, but also consider the exact order the words appear in a paragraph, hence creating a feature vector for each paragraph as well. Following the methodology described in this <a href="https://cs224d.stanford.edu/reports/SadeghianAmir.pdf">research paper</a>, I was able to increase my score quite substantially (results shown below).  
+
+However, I came to the conclusion that to obtain the best possible results, I would need to build my own custom Convolutional Neural Network (CNN) that allowed me to conduct the sentiment analysis. However, after training my CNN on the provided 25,000 labeled images, I realized that this data was insufficient to accurately minimize my loss function and increase my accuracy with each epoch trained (I stopped noticing a decrease in the loss value after ```epoch=3```). 
+
+As a result, following the guidance from <a href="https://www.kaggle.com/nilanml/imdb-review-deep-model-94-89-accuracy">here</a> and <a href="https://www.kaggle.com/alexcherniuk/imdb-review-word2vec-bilstm-99-acc">here</a>, I augmented my training dataset by including 50,000 more reviews provided by <a href="https://www.kaggle.com/utathya/imdb-review-dataset">Kaggle</a>. After training my CNN model on such a dataset, I was able to experience a substantial improvement in the result (even with very few epochs, as shown below). 
+
+
+| Implementation | Result |
+| -------------- | ------ |
+| Paragraph2Vec | 0.9082 |
+| CNN, Epoch=3 | 0.9407 |
