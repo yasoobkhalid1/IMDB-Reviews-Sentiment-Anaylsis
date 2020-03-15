@@ -44,3 +44,10 @@ As a result, following the guidance from <a href="https://www.kaggle.com/nilanml
 | Paragraph2Vec | 0.9082 |
 | CNN, Epoch=3 | 0.9407 |
 | CNN, Epoch=32 | 0.9843 |
+
+## Sentiment Analysis
+
+(All analysis performed from this point onwards is conducted on the CNN model trained with ```epoch=8``` - after observing the accuracy and loss curves of the ```epoch=32``` model, I found this to be the best trade-off between minimizing loss, maximizing our score, and training our model in a short period of time on a personal computer)
+
+While a similar analysis has been conducted in the Jupyter Notebook itself, I have duplicated the results here (with better explanations and greater verbosity) for ease of access. 
+
