@@ -43,3 +43,4 @@ As a result, following the guidance from <a href="https://www.kaggle.com/nilanml
 | -------------- | ------ |
 | Paragraph2Vec | 0.9082 |
 | CNN, Epoch=3 | 0.9407 |
+| CNN, Epoch=32 | 0.9843 |
