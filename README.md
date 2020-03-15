@@ -7,7 +7,7 @@ I first began by training a baseline model using the Bag of Words (BoG) algorith
 
 To evaluate my model, I used the Keggle's submission option that allocated a score based on the area under my model's ROC curve. Using the BoG implementation, I was able to obtain my default scores (listed below). For my classifier, I utilized Scikit-Learn's Random Forest Classifier, first with a default of ```n_estimators = 100 ``` and later (at the cost of greater time required to train the model) with ```n_estimators = 400```. While I noticed an increase in my score, it was quite minute compared to the increase in time.
 
-| Implementation | Result |
+| Implementation | Score |
 | -------------- | ------ |
 | BoG, 100 trees | 0.8432 |
 | BoG, 400 trees | 0.8590 |
@@ -23,7 +23,7 @@ I finetuned my hyper-parameters, as per the recommendations established in this 
 
 However, the results of the implementation itself were disappointing since I failed to notice an improvement in score, rather suffering a slight decrease from my BoG implementation 
 
-| Implementation | Result |
+| Implementation | Score |
 | -------------- | ------ |
 | BoG, max score | 0.8590 |
 | W2V, Avg Vec | 0.8314 |
@@ -39,7 +39,7 @@ However, I came to the conclusion that to obtain the best possible results, I wo
 As a result, following the guidance from <a href="https://www.kaggle.com/nilanml/imdb-review-deep-model-94-89-accuracy">here</a> and <a href="https://www.kaggle.com/alexcherniuk/imdb-review-word2vec-bilstm-99-acc">here</a>, I augmented my training dataset by including 50,000 more reviews provided by <a href="https://www.kaggle.com/utathya/imdb-review-dataset">Kaggle</a>. After training my CNN model on such a dataset, I was able to experience a substantial improvement in the result (even with very few epochs, as shown below). 
 
 
-| Implementation | Result |
+| Implementation | Score |
 | -------------- | ------ |
 | Paragraph2Vec | 0.9082 |
 | CNN, Epoch=3 | 0.9407 |
