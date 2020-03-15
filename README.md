@@ -51,3 +51,6 @@ As a result, following the guidance from <a href="https://www.kaggle.com/nilanml
 
 While a similar analysis has been conducted in the Jupyter Notebook itself, I have duplicated the results here (with better explanations and greater verbosity) for ease of access. 
 
+First, we will ensure that our distribution for the training data is equally balanced between positive and negative reviews. This is to ensure that our model is trained on a distribution most similar to the real-world testing data. 
+
+![Distribution](images/distribution.png)
