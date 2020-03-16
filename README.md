@@ -51,6 +51,26 @@ As a result, following the guidance from <a href="https://www.kaggle.com/nilanml
 
 While a similar analysis has been conducted in the Jupyter Notebook itself, I have duplicated the results here (with better explanations and greater verbosity) for ease of access. 
 
+### Distribution of Data
+
 First, we will ensure that our distribution for the training data is equally balanced between positive and negative reviews. This is to ensure that our model is trained on a distribution most similar to the real-world testing data. 
 
 ![Distribution](images/distribution.png)
+
+As we can clearly see here, our model is as we want it to be: perfectly balanced (as all things should be!) between positive and negative reviews. 
+
+### Distribution of Word Length
+
+Now, we can draw a graph that lets us observe how our training data's word length is distributed for each review. By doing so, we can analyse the average number of words in each review, alongside the mode and the median. 
+
+![Word Length Distribution](images/word_len_dist.png)
+
+As we can clearly observe in the above graph, the distribution of our word lengths for the reviews in the training data is not perfectly normal but rather left-skewed. We also obtain the following statistics:
+
+| Statistic | Value |
+| --------- | ------ |
+| Average | 122.2 |
+| Mode | 66 |
+| Median | 91.0 |
+
+
