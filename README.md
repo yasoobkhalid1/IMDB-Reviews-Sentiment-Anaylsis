@@ -74,4 +74,17 @@ As we can clearly observe in the above graph, the distribution of our word lengt
 | Mode | 66 |
 | Median | 91.0 |
 
+### Wordclouds
+
+To get a better sense of the words used in the reviews themselves, I drew wordclouds, using guidance from <a href="https://www.kaggle.com/sameerdev7/93-f-score-bag-of-words-m-bags-of-popcorn-with-rf">here</a>. Let us observe the word clouds we get from the cleaned up positive and negative reviews in our training data. 
+
+![Positive Wordcloud](images/pos_wordcloud.png)
+
+![Negative Wordcloud](images/neg_wordcloud.png)
+
+This provides us some very interesting information. First of all, we can observe that some words are quite common in both. For example, words such as 'film', 'movie', 'character', etc. are some of the most repeated words in both kinds of review. This makes intuitive sense since regardless of the sentiment associated with our review, we would expect them to use such neutral words quite frequently. 
+
+However, we do notice differences in the wordclouds after analysing a bit deeply. In the positive wordcloud, we see words such as 'good', 'great', 'love', etc. which highlight the positive sentiment associated with our review. In comparison, such words are not at all seen in the negative wordcloud, where words such as 'bad' and 'bore' are frequently used. This too matches with our analysis and presents how sentiment is associated with words in the movie reviews.
+
+
 
