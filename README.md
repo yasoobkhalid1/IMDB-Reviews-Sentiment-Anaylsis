@@ -86,5 +86,22 @@ This provides us some very interesting information. First of all, we can observe
 
 However, we do notice differences in the wordclouds after analysing a bit deeply. In the positive wordcloud, we see words such as 'good', 'great', 'love', etc. which highlight the positive sentiment associated with our review. In comparison, such words are not at all seen in the negative wordcloud, where words such as 'bad' and 'bore' are frequently used. This too matches with our analysis and presents how sentiment is associated with words in the movie reviews.
 
+### Confusion Matrix
+
+Using Pandas and Seaborn, I also drew confusion matrices for our training and testing data, with guidance from <a href="https://www.kaggle.com/alexcherniuk/imdb-review-word2vec-bilstm-99-acc">here</a>. 
+
+![Confusion Matrices](images/confusion_matrices.png)
+
+As we can observe, when we look at our data's confusion matrix, we notice that it is most accurate when recognizing if a review is positive (with 0.95 accuracy in the test data). In comparison, it struggles a bit more in recognizing negative reviews (with 0.92 accuracy in the test data). This is quite interesting to observe since it might highlight how our model is trained to understand the context of 'positively-associated' words better in comparison to their counterparts. 
+
+## Suggested Improvements
+
+There are various improvements we can further make in our model to increase our score and accuracy. 
+
+One thing to note is that our preprocessing stage removes all non-alphabetical characters from our reviews, which might actually be detrimental to our analysis. For example, reviewers might use numbers to highlight their individual ratings ("It's a 10 for me", etc.) which are highly correlated with whether a film's review is positive or negative. A more robust model can include such analysis. 
+
+Similarly, the usage of emoji's and punctuations ("I love this film!!!!", etc.) can also be great indicators of favoriblity or lack thereof. 
+
+Lastly, as we observed, our model is slightly less robust when it comes to 'negatively-worded' reviews and hence we can augment this deficiency by increasing our model's capabilities to recognize such words by training it further on pre-labelled negative words that allow it to differentiate such emotions with greater nuance. 
 
 
