@@ -66,7 +66,7 @@ Now, we can draw a graph that lets us observe how our training data's word lengt
 
 ![Word Length Distribution](images/word_len_dist.png)
 
-As we can clearly observe in the above graph, the distribution of our word lengths for the reviews in the training data is not perfectly normal but rather left-skewed. We also obtain the following statistics:
+As we can clearly observe in the above graph, the distribution of our word lengths for the reviews in the training data is not perfectly normal but rather right-skewed. We also obtain the following statistics:
 
 | Statistic | Value |
 | --------- | ------ |
